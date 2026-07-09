@@ -1,6 +1,7 @@
 # AVENAX — Design System (v1)
 
 > Status: approved direction; implementation gated per `ROADMAP.md` Phase 0 schedule.
+> **Governed by `BRAND_DNA.md` — the AVENAX visual constitution (ratified 2026-07-09, ADR-016).** This document is the constitution's implementation layer: it owns parameters (faces, values, scales); the constitution owns laws. Where the two conflict, `BRAND_DNA.md` wins.
 > Scope: foundation for ALL AVENAX surfaces — Web, Insight, Chief, Media Factory, OS. Every future product reuses this system.
 >
 > **Permanent law (founder directive):** Before building any page, the design system comes first. Do not design pages first — design the system first. Everything token-driven. No random hardcoded values. No one-off styling. No page-specific design decisions before system decisions. The Design System is the foundation of AVENAX.

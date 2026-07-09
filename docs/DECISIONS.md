@@ -70,6 +70,11 @@
 **Decision:** Three-layer token architecture (primitives → semantic → component) in Tailwind 4 `@theme` CSS; true-neutral monochrome ramp (no blue cast); dark-first with light theme mapped from day one; elevation via surface lightness + hairline borders (not shadows); typography Cabinet Grotesk / Instrument Sans / Geist Mono (self-hosted, licenses verified Day 1); motion = CSS-only, transform/opacity, one easing family; signature element "The Baseline" (self-drawing 1px hairline embodying "Next Standard").
 **Consequences:** Any change to faces/palette is a token-file change, not a component change.
 
+## ADR-016 — Brand DNA ratified: Concept A "The Standard" (2026-07-09, accepted)
+**Context:** Before token implementation (Phase 0 Day 1), the founder commissioned a permanent visual constitution. Three complete brand concepts were designed and compared in `BRAND_DNA.md` §15: A "The Standard" (measuring instrument), B "The Institute" (editorial humanism), C "The Signal" (terminal + accent).
+**Decision (founder):** Concept A ratified as the official AVENAX Brand DNA. `BRAND_DNA.md` becomes the visual constitution — superior to `DESIGN_SYSTEM.md`, which implements it. The Ten Design Laws (`BRAND_DNA.md` §12) are permanent and amendable only by a founder-signed ADR. Also ratified, per the constitution's challenged assumptions: (1) permanent laws, replaceable parameters; (2) the identity is the measurement language, not the monochrome palette; (3) Media Factory content may use expanded palettes inside a fixed AVENAX frame. **Founder clarification (binding):** the measurement language must feel premium, calm, and architectural — never like a trading terminal; never financial, noisy, or technical for its own sake.
+**Consequences:** ADR-015's parameter details proceed under this constitution. Every future design review checks against the Ten Laws and the terminal-clarification. No UI implementation begins until the founder approves the Day 1 token work.
+
 ---
 
 ## Open Items
