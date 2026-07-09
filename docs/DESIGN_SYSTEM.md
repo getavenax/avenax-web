@@ -78,13 +78,19 @@ Rule: `app/` imports from `sections/`, sections from `patterns/`, patterns from 
 ## 4. Component Hierarchy
 
 ```
-Layer A — Primitives (v1 builds these)
-  Button        variants: primary, secondary, ghost | sizes: sm, md, lg
-  Input         text, email | states: default, focus, error, disabled
+Layer A — Primitives (v1 set, expanded per founder directive 2026-07-09)
+  Button        variants: primary, secondary, ghost | sizes: sm, md, lg | loading
+  Input         text, email | states: default, focus, invalid, disabled
+  Textarea      states as Input
+  Select        NATIVE select, token-styled | states as Input
   Badge         variants: neutral, outline | sizes: sm, md
-  Card          variants: flat, raised, interactive
-  Icon          wrapper enforcing size tokens (16 / 20 / 24)
-  Baseline      the signature animated hairline
+  Card          variants: flat, raised, interactive | as: div/article/section
+  Divider       horizontal (hr) / vertical (role=separator)
+  Baseline      the signature animated hairline | staggered delays
+  Icon          wrapper enforcing size tokens (16 / 20 / 24, stroke 1.5)
+  Container     widths: default 1200 / narrow 720 / wide 1440
+  Stack         vertical rhythm, spacing-scale gaps
+  Inline        horizontal rhythm, spacing-scale gaps, align, wrap
 
 Layer B — Patterns
   Field         Label + Input + error message (accessibility built-in)

@@ -128,4 +128,38 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* The Baseline — the signature draws itself once (BRAND_DNA §1.5, §7).
+     Reduced motion collapses this via the central rule in globals.css. */
+  --animate-baseline-draw: baseline-draw var(--duration-cinematic) var(--ease-out) both;
+  @keyframes baseline-draw {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/*
+ * ---- LAYER 3 — COMPONENT TOKENS (DESIGN_SYSTEM §2) ----
+ * Created only when a component needs a named override point. Values reference
+ * Layer 1 / the spacing engine — never new raw design decisions.
+ */
+:root {
+  --button-height-sm: calc(var(--spacing) * 9); /* 36px */
+  --button-height-md: calc(var(--spacing) * 11); /* 44px — touch-target law by definition */
+  --button-height-lg: calc(var(--spacing) * 13); /* 52px */
+  --input-height-sm: var(--button-height-sm);
+  --input-height-md: var(--button-height-md);
+
+  /* Icon sizes are a closed set (DESIGN_SYSTEM §7): 16 / 20 / 24, stroke 1.5 */
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-stroke: 1.5;
+
+  --card-padding: calc(var(--spacing) * 6); /* 24px */
+  --baseline-thickness: 1px;
 }
