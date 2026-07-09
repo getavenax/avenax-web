@@ -68,7 +68,7 @@ avenax-web/
 ├── hooks/                  # useReducedMotion, useTheme
 ├── types/                  # shared TypeScript types
 ├── constants/              # site config, nav items, metadata
-└── public/fonts/           # self-hosted fonts (no third-party font requests)
+└── styles/fonts/           # self-hosted fonts + licenses, via next/font/local (no third-party requests; not public/ — avoids double-shipping)
 ```
 
 Rule: `app/` imports from `sections/`, sections from `patterns/`, patterns from `ui/`. Never upward, never sideways-skipping. Future products copy `styles/` + `components/ui/` as the shared kernel (extracted to a package only when a second product actually exists — no premature monorepo).
@@ -109,8 +109,8 @@ Typography carries the entire brand (no color to lean on). Three faces, three jo
 
 | Role | Face | Rationale |
 |---|---|---|
-| Display / Headings | **Cabinet Grotesk** (Fontshare, free commercial license) | Geometric grotesque with personality at heavy weights — premium without imitating Inter-everywhere. Distinct from OpenAI (Söhne) and Vercel (Geist). |
-| Body / UI | **Instrument Sans** (Google Fonts, OFL) | Quiet, highly legible, pairs cleanly under Cabinet Grotesk. |
+| Display / Headings | **Archivo** (Google Fonts, OFL) | Characterful grotesque with real presence at heavy weights; 100% OFL — the public repository stays legally clean (ADR-017). Replaced Cabinet Grotesk, whose Fontshare EULA prohibits public-server distribution. Secondary fallback: Familjen Grotesk (OFL). |
+| Body / UI | **Instrument Sans** (Google Fonts, OFL) | Quiet, highly legible, pairs cleanly under the display face. |
 | Data / Mono | **Geist Mono** (OFL) | Tabular numerals — critical for Insight's market data later. |
 
 All self-hosted, `font-display: swap`, subset latin. License verification is step one of implementation.

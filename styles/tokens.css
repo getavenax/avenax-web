@@ -1,0 +1,131 @@
+/*
+ * AVENAX — Design Tokens
+ * ======================
+ * Layer 1 (primitives) + Tailwind theme wiring.
+ * Semantic (Layer 2) values live in themes.css: dark on :root, light under [data-theme="light"].
+ * Governed by docs/BRAND_DNA.md (constitution) and docs/DESIGN_SYSTEM.md (implementation spec).
+ *
+ * Laws in force here:
+ *  - Token before value: components never contain a raw hex, px, ms, or curve.
+ *  - Contrast is the palette: one true-neutral ramp, no blue cast, no brand accent.
+ *  - Status colors are product-only — never on brand/marketing surfaces.
+ *
+ * WCAG 2.2 AA audit (computed 2026-07-09, contrast vs base/raised/overlay):
+ *  dark  text-primary   21.00 / 19.44 / 18.42  PASS
+ *  dark  text-secondary  7.46 /  6.91 /  6.55  PASS
+ *  dark  text-tertiary   5.17 /  4.79 /  4.54  PASS  (gray-450 — see deviation note)
+ *  dark  status pos/neg/warn ≥ 6.66 everywhere PASS
+ *  light text-primary   21.00 / 19.26 / 21.00  PASS
+ *  light text-secondary  8.86 /  8.13 /  8.86  PASS
+ *  light text-tertiary   5.10 /  4.68 /  5.10  PASS
+ *  focus ring both themes 21.00               PASS
+ *
+ * DEVIATION (ratified via founder token review): DESIGN_SYSTEM.md §6 mapped dark
+ * text-tertiary to gray-500 (#6E6E6E), which fails AA on every dark surface
+ * (4.12 / 3.81 / 3.61). Primitive gray-450 (#7E7E7E) added; dark tertiary uses it.
+ * gray-500 remains for light-theme tertiary and non-text/disabled uses.
+ */
+
+:root {
+  /* ---- LAYER 1 — PRIMITIVES (never consumed by components; themes map them) ---- */
+
+  /* True-neutral gray ramp — no blue cast, ever (BRAND_DNA §5.4) */
+  --gray-0: #ffffff;
+  --gray-50: #f5f5f5;
+  --gray-100: #e8e8e8;
+  --gray-200: #d1d1d1;
+  --gray-400: #9a9a9a;
+  --gray-450: #7e7e7e;
+  --gray-500: #6e6e6e;
+  --gray-600: #4a4a4a;
+  --gray-700: #2e2e2e;
+  --gray-800: #1c1c1c;
+  --gray-850: #141414;
+  --gray-900: #0d0d0d;
+  --gray-1000: #000000;
+
+  /* Status primitives — product surfaces only, never the brand site (BRAND_DNA §5.7) */
+  --status-positive: #4ade80;
+  --status-negative: #f87171;
+  --status-warning: #fbbf24;
+
+  /* Motion — one duration scale, one easing family (BRAND_DNA §7) */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-cinematic: 700ms; /* hero / Baseline draw — nothing slower exists */
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-narrow: 720px; /* prose */
+  --container-wide: 1440px; /* full-bleed sections */
+  --measure: 65ch; /* max reading measure */
+  --gutter: 24px;
+  --gutter-mobile: 16px;
+}
+
+/*
+ * ---- TAILWIND THEME (Tailwind 4, CSS-first) ----
+ * `inline` entries reference the runtime custom properties above/in themes.css,
+ * so utilities are theme-aware. Spacing keeps Tailwind's 0.25rem base — the 4px law.
+ */
+@theme inline {
+  /* Semantic colors (Layer 2 — values in themes.css). Utilities: bg-surface,
+     text-primary, border-edge, etc. One namespace, meaning-named (never color-named). */
+  --color-surface: var(--bg-base);
+  --color-surface-raised: var(--bg-raised);
+  --color-surface-overlay: var(--bg-overlay);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-tertiary: var(--text-tertiary);
+  --color-inverse: var(--text-inverse);
+  --color-edge: var(--border-subtle);
+  --color-edge-strong: var(--border-strong);
+  --color-focus: var(--border-focus);
+  --color-action: var(--interactive-primary);
+  --color-action-hover: var(--interactive-hover);
+  --color-action-active: var(--interactive-active);
+  --color-positive: var(--status-positive);
+  --color-negative: var(--status-negative);
+  --color-warning: var(--status-warning);
+
+  /* Typography — faces injected by next/font/local in app/layout.tsx */
+  --font-display: var(--font-archivo);
+  --font-sans: var(--font-instrument-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  /* Type scale — fluid display, 1.25 major at desktop (DESIGN_SYSTEM §5) */
+  --text-display-xl: clamp(3.5rem, 8vw, 7rem);
+  --text-display-xl--line-height: 1.1;
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: -0.02em;
+  --text-h1: 3rem;
+  --text-h1--line-height: 1.1;
+  --text-h2: 2.25rem;
+  --text-h2--line-height: 1.15;
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.2;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.6;
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.4;
+
+  /* Radius — restrained; no blobs (BRAND_DNA §8) */
+  --radius-sm: 6px; /* badges, inputs */
+  --radius-md: 10px; /* buttons, cards */
+  --radius-lg: 16px; /* modals, media */
+  --radius-full: 9999px; /* genuinely circular things only */
+
+  /* Easing — one family; enters settle, exits leave (BRAND_DNA §7) */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

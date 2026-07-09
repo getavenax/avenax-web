@@ -1,15 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import localFont from "next/font/local";
+import "../styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const archivo = localFont({
+  src: "../styles/fonts/archivo/Archivo-Variable-latin.woff2",
+  weight: "100 900",
+  variable: "--font-archivo",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
+const instrumentSans = localFont({
+  src: "../styles/fonts/instrument-sans/InstrumentSans-Variable-latin.woff2",
+  weight: "400 700",
+  variable: "--font-instrument-sans",
+  display: "swap",
+});
+
+const geistMono = localFont({
+  src: "../styles/fonts/geist-mono/GeistMono-Variable-latin.woff2",
+  weight: "100 900",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  // Mono is the data/instrument face; it does not appear above the fold on
+  // the brand site, so it must not compete for preload bandwidth.
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -25,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${archivo.variable} ${instrumentSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

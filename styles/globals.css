@@ -1,0 +1,59 @@
+/*
+ * AVENAX — Global Styles
+ * ======================
+ * Import order: Tailwind engine, then tokens (@theme), then theme mappings.
+ * This file holds resets and base typography only — no component styles,
+ * no page styles, no design decisions beyond the system's own base.
+ */
+
+@import 'tailwindcss';
+@import './tokens.css';
+@import './themes.css';
+
+@layer base {
+  html {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-size: var(--text-base);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    line-height: 1.1;
+  }
+
+  ::selection {
+    background-color: var(--text-primary);
+    color: var(--bg-base);
+  }
+
+  /* Focus is safety equipment: instant, visible, identical everywhere (BRAND_DNA §7).
+     Components may refine the ring; nothing may remove it. */
+  :focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  /* Reduced motion is a first-class mode (Design Law 7): all motion collapses
+     to brief opacity. Central implementation — never re-implemented per component. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: var(--duration-fast) !important;
+      transition-property: opacity !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

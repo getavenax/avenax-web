@@ -75,6 +75,11 @@
 **Decision (founder):** Concept A ratified as the official AVENAX Brand DNA. `BRAND_DNA.md` becomes the visual constitution — superior to `DESIGN_SYSTEM.md`, which implements it. The Ten Design Laws (`BRAND_DNA.md` §12) are permanent and amendable only by a founder-signed ADR. Also ratified, per the constitution's challenged assumptions: (1) permanent laws, replaceable parameters; (2) the identity is the measurement language, not the monochrome palette; (3) Media Factory content may use expanded palettes inside a fixed AVENAX frame. **Founder clarification (binding):** the measurement language must feel premium, calm, and architectural — never like a trading terminal; never financial, noisy, or technical for its own sake.
 **Consequences:** ADR-015's parameter details proceed under this constitution. Every future design review checks against the Ten Laws and the terminal-clarification. No UI implementation begins until the founder approves the Day 1 token work.
 
+## ADR-017 — Day 1 parameter corrections: Archivo replaces Cabinet Grotesk; gray-450 added (2026-07-09, accepted)
+**Context:** Day 1 license verification (mandated by `BRAND_DNA.md` §4.3) found the Fontshare Free Font EULA §02 prohibits distribution of font files, including "uploading them in a public server" — incompatible with the public `avenax-web` repository (ADR-013). Separately, the token-level WCAG audit found the specified dark-theme `text-tertiary` mapping (`gray-500` #6E6E6E) fails AA contrast (4.5:1) on dark surfaces.
+**Decision (founder):** (1) Cabinet Grotesk removed from the repository entirely; display face is the pre-approved OFL fallback **Archivo** (secondary: Familjen Grotesk if Archivo shows visual issues). The public repository must remain legally clean; ambiguous licensing risk on a core brand asset is not accepted. (2) Primitive `gray-450` (#7E7E7E) added to the ramp; dark `text-tertiary` remaps to it. Accessibility outranks strict adherence to the original ramp.
+**Consequences:** `styles/fonts/` is 100% OFL. ADR-015's typography parameter is amended accordingly (this entry supersedes that detail; ADR-015 otherwise stands). Identity unaffected per the constitution — the measurement language, not the typeface, carries the brand. Token contrast table in `styles/tokens.css` documents the verified pairings.
+
 ---
 
 ## Open Items

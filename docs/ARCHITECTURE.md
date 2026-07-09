@@ -59,8 +59,9 @@ avenax-web/
 ├── types/                  # shared TypeScript types
 ├── constants/              # site config, navigation, metadata, external URLs
 ├── docs/                   # THIS documentation set — permanent project memory
-└── public/
-    └── fonts/              # self-hosted fonts — no third-party font requests
+├── public/                 # static assets served verbatim (favicons, og images)
+└── styles/fonts/           # self-hosted font files + licenses — loaded via next/font/local
+                            # (NOT public/: next/font emits hashed copies; public/ would ship them twice)
 ```
 
 ### Import Direction Law
