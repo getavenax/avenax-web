@@ -30,7 +30,8 @@ export function Select({
       <select
         aria-invalid={invalid || undefined}
         className={cn(
-          "w-full appearance-none rounded-sm border border-edge-strong bg-transparent ps-4 pe-10 text-primary transition-colors duration-(--duration-fast) ease-out aria-invalid:border-negative disabled:pointer-events-none disabled:border-edge disabled:text-tertiary",
+          // Invalid = maximum-contrast hairline, monochrome-first (ADR-019).
+          "w-full appearance-none rounded-sm border border-edge-strong bg-transparent ps-4 pe-10 text-primary transition-colors duration-(--duration-fast) ease-out aria-invalid:border-(--text-primary) disabled:pointer-events-none disabled:border-edge disabled:text-tertiary",
           sizeClasses[size],
         )}
         {...rest}

@@ -12,7 +12,8 @@ export function Textarea({ invalid = false, className, ...rest }: TextareaProps)
     <textarea
       aria-invalid={invalid || undefined}
       className={cn(
-        "w-full rounded-sm border border-edge-strong bg-transparent px-4 py-3 text-base text-primary transition-colors duration-(--duration-fast) ease-out placeholder:text-tertiary aria-invalid:border-negative disabled:pointer-events-none disabled:border-edge disabled:text-tertiary",
+        // Invalid = maximum-contrast hairline, monochrome-first (ADR-019).
+        "w-full rounded-sm border border-edge-strong bg-transparent px-4 py-3 text-base text-primary transition-colors duration-(--duration-fast) ease-out placeholder:text-tertiary aria-invalid:border-(--text-primary) disabled:pointer-events-none disabled:border-edge disabled:text-tertiary",
         className,
       )}
       {...rest}

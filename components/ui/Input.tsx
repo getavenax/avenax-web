@@ -24,7 +24,9 @@ export function Input({
     <input
       aria-invalid={invalid || undefined}
       className={cn(
-        "w-full rounded-sm border border-edge-strong bg-transparent px-4 text-primary transition-colors duration-(--duration-fast) ease-out placeholder:text-tertiary aria-invalid:border-negative disabled:pointer-events-none disabled:border-edge disabled:text-tertiary",
+        // Invalid = maximum-contrast hairline, monochrome-first (ADR-019):
+        // the error is said in text by Field, never by color alone.
+        "w-full rounded-sm border border-edge-strong bg-transparent px-4 text-primary transition-colors duration-(--duration-fast) ease-out placeholder:text-tertiary aria-invalid:border-(--text-primary) disabled:pointer-events-none disabled:border-edge disabled:text-tertiary",
         sizeClasses[size],
         className,
       )}

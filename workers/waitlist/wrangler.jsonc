@@ -1,0 +1,15 @@
+{
+  // AVENAX waitlist Worker (ADR-019). Contains bindings only — no secrets.
+  // After `wrangler d1 create avenax-waitlist`, replace database_id with the
+  // real id printed by that command, then `wrangler deploy`.
+  "name": "avenax-waitlist",
+  "main": "index.ts",
+  "compatibility_date": "2026-07-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "avenax-waitlist",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ]
+}

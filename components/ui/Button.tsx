@@ -26,6 +26,21 @@ const sizeClasses: Record<ButtonSize, string> = {
   lg: "h-(--button-height-lg) px-8 text-lg",
 };
 
+/**
+ * Public class recipe so patterns can render link-shaped CTAs (<a>) with the
+ * exact Button look without duplicating it (import-direction-safe reuse).
+ */
+export function buttonClasses(
+  variant: ButtonVariant = "primary",
+  size: ButtonSize = "md",
+): string {
+  return cn(
+    "inline-flex items-center justify-center gap-2 rounded-md font-medium select-none transition-colors duration-(--duration-fast) ease-out disabled:pointer-events-none",
+    variantClasses[variant],
+    sizeClasses[size],
+  );
+}
+
 export function Button({
   variant = "primary",
   size = "md",
@@ -39,12 +54,7 @@ export function Button({
     <button
       disabled={disabled || loading}
       aria-busy={loading || undefined}
-      className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-md font-medium select-none transition-colors duration-(--duration-fast) ease-out disabled:pointer-events-none",
-        variantClasses[variant],
-        sizeClasses[size],
-        className,
-      )}
+      className={cn(buttonClasses(variant, size), className)}
       {...rest}
     >
       {loading && (

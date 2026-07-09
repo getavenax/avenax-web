@@ -85,11 +85,16 @@
 **Decision (founder):** AVNX token rejected because it does not solve a real Product One problem, creates regulatory and trust risk, and conflicts with the trust-first positioning of AVENAX Insight. **Status: rejected unless future platform conditions materially change.**
 **Consequences:** no token work of any kind — no design, no smart contracts, no marketing references. Re-evaluation requires a new ADR demonstrating genuine multi-party platform economics that regulated payment rails cannot serve.
 
+## ADR-019 — Waitlist backend: Cloudflare Worker + D1; monochrome brand-surface errors (2026-07-09, accepted)
+**Context:** OI-1 required a waitlist backend compatible with the static Phase 0 architecture (ADR-012) and the Performance-100 gate. Separately, the invalid-state treatment on the public site needed a ruling against the monochrome brand law.
+**Decision (founder):** (1) Waitlist = Cloudflare Worker (`workers/waitlist/` in this repo — website infrastructure, not Product One logic, so ADR-013 stands) + D1 single table `waitlist(email UNIQUE, created_at, source)`. Constraints: no IP/user-agent/fingerprint stored; duplicate submissions indistinguishable from new (no email enumeration); bound SQL parameters only; zero secrets in the repo; CORS limited to getavenax.com, www.getavenax.com, avenax-web.pages.dev (+ branch previews), and localhost in development. Anti-abuse = honeypot + rate limiting; **no CAPTCHA/Turnstile in v1** (third-party script vs Performance-100; revisit only on real abuse). (2) **Brand-surface form errors are monochrome-first**: invalid controls show a maximum-contrast hairline and a text message — red status tokens are reserved for product/risk contexts, never the public brand site unless absolutely necessary.
+**Consequences:** OI-1 resolved. The Worker deploys separately from Pages (deploy steps in `workers/waitlist/wrangler.jsonc` comments); the site talks to `waitlist.getavenax.com`. Input/Textarea/Select primitives express `aria-invalid` monochromatically.
+
 ---
 
 ## Open Items
 
-- **OI-1:** Waitlist backend for a static site (options: Cloudflare Pages Function-lite, Formspree-class service, Cloudflare Worker endpoint). Decide Day 5. Constraint: must not compromise the static architecture or Performance 100.
+- **OI-1:** ~~Waitlist backend for a static site~~ — **RESOLVED 2026-07-09 by ADR-019** (Cloudflare Worker + D1).
 - **OI-2:** Analytics choice (or none for v1). Decide Day 8. Constraint: Performance-100 gate.
 - **OI-3:** Logo — wordmark direction to be reviewed within Days 1–2 alongside token review.
 
