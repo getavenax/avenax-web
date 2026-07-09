@@ -80,6 +80,11 @@
 **Decision (founder):** (1) Cabinet Grotesk removed from the repository entirely; display face is the pre-approved OFL fallback **Archivo** (secondary: Familjen Grotesk if Archivo shows visual issues). The public repository must remain legally clean; ambiguous licensing risk on a core brand asset is not accepted. (2) Primitive `gray-450` (#7E7E7E) added to the ramp; dark `text-tertiary` remaps to it. Accessibility outranks strict adherence to the original ramp.
 **Consequences:** `styles/fonts/` is 100% OFL. ADR-015's typography parameter is amended accordingly (this entry supersedes that detail; ADR-015 otherwise stands). Identity unaffected per the constitution — the measurement language, not the typeface, carries the brand. Token contrast table in `styles/tokens.css` documents the verified pairings.
 
+## ADR-018 — AVNX ecosystem token rejected (2026-07-09, accepted)
+**Context:** Founder commissioned a research-only evaluation of an AVENAX ecosystem token (AVNX). Evidence found no successful token integration by any SaaS company (closest case, Brave's BAT: genuine adoption, ~−96% from all-time high); failures with severe consequences — Kik/Kin (SEC summary judgment, $5M penalty), Telegram/TON ($1.7B raised, enjoined, refunded), Helium/HNT (−96%, SEC suit, CEO exit). Under the Howey test, "utility" labeling does not prevent securities classification. The retail-trading scam taxonomy documented in `MARKET_RESEARCH.md` includes token-based schemes.
+**Decision (founder):** AVNX token rejected because it does not solve a real Product One problem, creates regulatory and trust risk, and conflicts with the trust-first positioning of AVENAX Insight. **Status: rejected unless future platform conditions materially change.**
+**Consequences:** no token work of any kind — no design, no smart contracts, no marketing references. Re-evaluation requires a new ADR demonstrating genuine multi-party platform economics that regulated payment rails cannot serve.
+
 ---
 
 ## Open Items

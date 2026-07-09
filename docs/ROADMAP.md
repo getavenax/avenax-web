@@ -43,6 +43,7 @@ Starts only after Phase 0 ships. First actions when Phase 1 opens:
 
 1. Create **private** repository for product code.
 2. Architecture document before any code (approval-gated, consistent with founder's phased workflow).
+   - **Internal 50–100 chart benchmark before launch** — level-accuracy and consistency are existential engineering priorities (founder-approved recommendation, 2026-07-09; evidence: `MARKET_RESEARCH.md` F1/F2, `COMPETITOR_MATRIX.md` §5).
 3. Positioning constraint baked into architecture: educational analysis / decision support — not financial advice, not signals, not investment recommendations. Output format, wording, and system prompts must structurally enforce this.
 4. MVP scope: screenshot upload → market structure, liquidity, bias, high-probability scenarios, risk-management education, explanations.
 5. Path to first paying customer: waitlist (from Phase 0) → private beta → paid tier.
