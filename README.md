@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AVENAX — Company Website
 
-## Getting Started
+**Next Standard.**
 
-First, run the development server:
+This is the public repository for [getavenax.com](https://getavenax.com), the website of AVENAX — a company building autonomous AI products that help people think better, work faster, and create more.
+
+This repository contains **only the company website**. Product code lives in private repositories (see `docs/ARCHITECTURE.md` §3).
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, static export)
+- TypeScript (strict)
+- React 19 (Server Components by default)
+- Tailwind CSS 4 (CSS-first — all design tokens in `styles/tokens.css`)
+- Cloudflare Pages (auto-deploy from `main`)
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # local development
+npm run build    # static export to out/
+npm run lint     # eslint
+npx tsc --noEmit # type-check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Architecture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/          routes only — no design decisions
+components/
+  ui/         Layer A — primitives
+  patterns/   Layer B — compositions
+  sections/   Layer C — page sections
+styles/       design tokens, themes, fonts (single source of truth)
+lib/ hooks/ types/ constants/
+docs/         permanent project documentation
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Imports flow strictly downward: `app → sections → patterns → ui → tokens`. See `docs/ARCHITECTURE.md`.
 
-## Learn More
+## Design System
 
-To learn more about Next.js, take a look at the following resources:
+Every color, size, spacing, radius, duration, and easing is a token in `styles/tokens.css` — zero hardcoded design values in components. The visual constitution is `docs/BRAND_DNA.md`; the implementation law is `docs/DESIGN_SYSTEM.md`. Fonts are self-hosted and 100% OFL-licensed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Start at [`docs/AGENTS.md`](docs/AGENTS.md) — the canonical index. Key documents: `PROJECT_VISION.md`, `ENGINEERING_RULES.md`, `DECISIONS.md` (append-only ADR log), `DESIGN_SYSTEM.md`, `BRAND_DNA.md`.
 
-## Deploy on Vercel
+## Quality Gates
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Every release: Lighthouse 100/100/100/100 · WCAG 2.2 AA · clean axe scan · manual keyboard pass · reduced-motion pass.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+© AVENAX. Website content and brand assets are not licensed for reuse. Font files in `styles/fonts/` are licensed under the SIL Open Font License 1.1 (license texts included alongside each family).
