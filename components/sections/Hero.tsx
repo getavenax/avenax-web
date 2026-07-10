@@ -12,13 +12,25 @@ import { SITE } from "@/constants/site";
 export function Hero() {
   return (
     <Container as="section" className="pt-24 pb-32 md:pt-32">
-      <h1 className="animate-hero-rise max-w-4xl text-display-xl font-bold tracking-tight text-primary">
+      {/* The h1 is the LCP element — it paints instantly, never animated.
+          The orchestrated moment lives in the Baseline draw and the rise of
+          the supporting lines (Lighthouse-100 is a product requirement). */}
+      <h1 className="max-w-4xl text-display-xl font-bold tracking-tight text-primary">
         {SITE.slogan}
       </h1>
       <Baseline delay="sm" className="mt-6 max-w-4xl" />
       <p className="animate-hero-rise mt-8 max-w-2xl text-lg text-secondary delay-(--duration-base)">
         Autonomous AI products that help people think better, work faster, and
         create more.
+      </p>
+      <p className="animate-hero-rise mt-4 font-mono text-sm text-tertiary delay-(--duration-base)">
+        <a
+          href="#insight"
+          className="transition-colors duration-(--duration-fast) ease-out hover:text-primary"
+        >
+          Product One: AVENAX Insight — AI chart analysis that teaches while it
+          analyzes.
+        </a>
       </p>
       <Inline
         gap="4"

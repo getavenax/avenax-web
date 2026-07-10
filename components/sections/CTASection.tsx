@@ -14,7 +14,8 @@ export function CTASection() {
             Join the waitlist.
           </h2>
           <p className="text-base text-secondary">
-            Early access to AVENAX Insight.
+            The next standard is built with its first users. Early access to
+            Insight — and a voice in what it becomes.
           </p>
         </Stack>
         <WaitlistForm source="landing" className="max-w-md" />

@@ -14,6 +14,9 @@ const instrumentSans = localFont({
   weight: "400 700",
   variable: "--font-instrument-sans",
   display: "swap",
+  // Body face: not the LCP element — must not compete with CSS and the
+  // display face for first-paint bandwidth on slow connections.
+  preload: false,
 });
 
 const geistMono = localFont({
@@ -26,10 +29,41 @@ const geistMono = localFont({
   preload: false,
 });
 
+const TITLE = "AVENAX — Next Standard.";
+const DESCRIPTION =
+  "AVENAX builds autonomous AI products that help people think better, work faster, and create more. Product One: Insight — educational AI chart analysis.";
+
 export const metadata: Metadata = {
-  title: "AVENAX — Next Standard.",
-  description:
-    "AVENAX builds autonomous AI products that help people think better, work faster, and create more. Product One: Insight — educational AI chart analysis.",
+  metadataBase: new URL("https://getavenax.com"),
+  title: {
+    default: TITLE,
+    template: "%s — AVENAX",
+  },
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    siteName: "AVENAX",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "AVENAX — Next Standard.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/og.png"],
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

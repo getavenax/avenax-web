@@ -90,12 +90,27 @@
 **Decision (founder):** (1) Waitlist = Cloudflare Worker (`workers/waitlist/` in this repo — website infrastructure, not Product One logic, so ADR-013 stands) + D1 single table `waitlist(email UNIQUE, created_at, source)`. Constraints: no IP/user-agent/fingerprint stored; duplicate submissions indistinguishable from new (no email enumeration); bound SQL parameters only; zero secrets in the repo; CORS limited to getavenax.com, www.getavenax.com, avenax-web.pages.dev (+ branch previews), and localhost in development. Anti-abuse = honeypot + rate limiting; **no CAPTCHA/Turnstile in v1** (third-party script vs Performance-100; revisit only on real abuse). (2) **Brand-surface form errors are monochrome-first**: invalid controls show a maximum-contrast hairline and a text message — red status tokens are reserved for product/risk contexts, never the public brand site unless absolutely necessary.
 **Consequences:** OI-1 resolved. The Worker deploys separately from Pages (deploy steps in `workers/waitlist/wrangler.jsonc` comments); the site talks to `waitlist.getavenax.com`. Input/Textarea/Select primitives express `aria-invalid` monochromatically.
 
+## ADR-020 — Analytics: Cloudflare Web Analytics, Performance-100-gated (2026-07-10, accepted)
+**Context:** OI-2 required an analytics decision constrained by the Performance-100 gate. The founder's milestone framework adds the mandatory question "what will this teach us about our users?" — today the site learns nothing beyond waitlist rows.
+**Decision (founder):** Cloudflare Web Analytics is the chosen solution — cookieless, no consent banner required, consistent with the no-tracking privacy posture (ADR-019). **Hard condition: if Lighthouse Performance drops below 100 with the beacon, analytics does not ship. Performance wins.** The beacon is added only after (a) the founder provides the site token from the Cloudflare dashboard and (b) a with/without Lighthouse comparison passes.
+**Consequences:** OI-2 resolved. CSP (`public/_headers`) already allowlists `static.cloudflareinsights.com` / `cloudflareinsights.com` so enabling is a one-line change when the token arrives. No other analytics or third-party scripts without a new ADR.
+
+## ADR-021 — Product Law: "AI that shows its work" (2026-07-10, accepted)
+**Context:** Positioning work on the landing page converged on explainability as AVENAX's core differentiation. The founder elevated it from copy to permanent law, human-centric and company-wide.
+**Decision (founder):** Permanent Product Law for every AVENAX AI product, present and future: (1) **human judgment comes first** — AVENAX AI strengthens human judgment, never replaces it (extends ADR-004's educational positioning company-wide); (2) the system **explains its reasoning whenever possible**; (3) **where reasoning cannot be shown, the system must challenge whether the conclusion should be presented at all** — unexplainable output is a design defect, not a shipping default; (4) "AI that shows its work" is brand identity backed by architecture — it may never become marketing decoration detached from product behavior.
+**Consequences:** Phase 1 architecture review gains an explainability check alongside the positioning check (ADR-004). Insight's Reasoning section is load-bearing scope and cannot be descoped. Future products (Chief, Media Factory, OS) inherit the law at design time. Landing copy ("AI that shows its work" / "Explainable by design" / "Confidence is built, not given") is the public statement of this law.
+
+## ADR-022 — The Three Laws: permanent company philosophy (2026-07-10, proposed → pending founder sign-off on final document wording)
+**Context:** The "AI that shows its work" positioning work (ADR-021) matured into company-level philosophy. The founder commissioned a permanent philosophy document with a purpose statement and three product laws, separating timeless internal law from evolvable public messaging.
+**Decision (founder):** `PHILOSOPHY.md` ratified. Purpose: AVENAX builds AI that amplifies human capability so people think better, work faster, create more, and live freer. The Three Laws, binding on every product: (1) **Human judgment comes first.** (2) **Every important conclusion must be explainable or explicitly uncertain** — public expression today: "AI that shows its work"; the slogan may evolve, the law does not. (3) **Confidence begins with understanding.** Law 2's review test is comprehension, not visibility: *"Can the user understand why?"* Public proof sentence: **"We explain. You decide."**
+**Consequences:** Supersedes and absorbs ADR-021's scope into Law 2. Every product architecture review verifies all three laws; every new product idea faces the three tests before the Founder Decision Filter; where a law conflicts with growth, revenue, or convenience, the law wins. `PHILOSOPHY.md` joins the mandatory session startup sequence.
+
 ---
 
 ## Open Items
 
 - **OI-1:** ~~Waitlist backend for a static site~~ — **RESOLVED 2026-07-09 by ADR-019** (Cloudflare Worker + D1).
-- **OI-2:** Analytics choice (or none for v1). Decide Day 8. Constraint: Performance-100 gate.
+- **OI-2:** ~~Analytics choice~~ — **RESOLVED 2026-07-10 by ADR-020** (Cloudflare Web Analytics, Performance-100-gated; beacon pending founder token + gate test).
 - **OI-3:** Logo — wordmark direction to be reviewed within Days 1–2 alongside token review.
 
 ---
