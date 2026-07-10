@@ -1,15 +1,25 @@
 {
-  // AVENAX waitlist Worker (ADR-019). Contains bindings only — no secrets.
-  // After `wrangler d1 create avenax-waitlist`, replace database_id with the
-  // real id printed by that command, then `wrangler deploy`.
-  "name": "avenax-waitlist",
-  "main": "index.ts",
-  "compatibility_date": "2026-07-01",
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "avenax-waitlist",
-      "database_id": "00000000-0000-0000-0000-000000000000"
-    }
-  ]
+	// AVENAX waitlist Worker (ADR-019). Contains bindings only — no secrets.
+	// Deploying also provisions the custom domain below (DNS + TLS automatic).
+	"name": "avenax-waitlist",
+	"main": "index.ts",
+	"compatibility_date": "2026-07-01",
+	"routes": [
+		{
+			"pattern": "waitlist.getavenax.com",
+			"custom_domain": true
+		}
+	],
+	// Workers Logs for founder-visible diagnostics (no PII is ever logged by the code).
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			// Binding name MUST stay "DB" — index.ts reads env.DB.
+			"binding": "DB",
+			"database_name": "avenax-waitlist",
+			"database_id": "3607b0d5-6b89-4ae4-91af-74023113af78"
+		}
+	]
 }
