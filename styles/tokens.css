@@ -132,6 +132,20 @@
   /* The Baseline — the signature draws itself once (BRAND_DNA §1.5, §7).
      Reduced motion collapses this via the central rule in globals.css. */
   --animate-baseline-draw: baseline-draw var(--duration-cinematic) var(--ease-out) both;
+
+  /* Hero entrance — the page's ONE orchestrated moment (BRAND_DNA §7:
+     opacity + 12px rise, ease-out, staggered via delay utilities). */
+  --animate-hero-rise: hero-rise var(--duration-slow) var(--ease-out) both;
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   @keyframes baseline-draw {
     from {
       transform: scaleX(0);

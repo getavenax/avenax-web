@@ -1,21 +1,21 @@
-export default function Home() {
+import { Footer } from "@/components/patterns/Footer";
+import { NavBar } from "@/components/patterns/NavBar";
+import { CTASection } from "@/components/sections/CTASection";
+import { Hero } from "@/components/sections/Hero";
+import { ManifestoExcerpt } from "@/components/sections/ManifestoExcerpt";
+import { ProductTeaser } from "@/components/sections/ProductTeaser";
+
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-      <h1 className="text-7xl font-bold tracking-tight">
-        AVENAX
-      </h1>
-
-      <p className="mt-6 text-2xl text-gray-400">
-        Next Standard.
-      </p>
-
-      <p className="mt-10 max-w-xl text-center text-gray-500">
-        Building the next generation of AI products.
-      </p>
-
-      <div className="mt-20 rounded-full border border-zinc-700 px-6 py-3 text-sm">
-        Coming Soon
-      </div>
-    </main>
+    <>
+      <NavBar />
+      <main id="main" className="flex-1">
+        <Hero />
+        <ManifestoExcerpt />
+        <ProductTeaser />
+        <CTASection />
+      </main>
+      <Footer />
+    </>
   );
 }
