@@ -5,33 +5,45 @@ import { Inline } from "@/components/ui/Inline";
 import { SITE } from "@/constants/site";
 
 /**
- * The one orchestrated moment on the page (BRAND_DNA §7): headline rises,
- * the Baseline draws, supporting copy follows. Pure CSS, staggered with
- * delay tokens; reduced motion collapses it centrally in globals.css.
+ * The nameplate hero (founder-locked copy, 2026-07-11): AVENAX is the primary
+ * brand mark and the LCP element — it paints instantly and is never animated.
+ * "Next Standard." stands on the Baseline as a signature, never as a name.
+ * The orchestrated moment lives in the Baseline draw and the supporting rises.
  */
 export function Hero() {
   return (
     <Container as="section" className="pt-24 pb-32 md:pt-32">
-      {/* The h1 is the LCP element — it paints instantly, never animated.
-          The orchestrated moment lives in the Baseline draw and the rise of
-          the supporting lines (Lighthouse-100 is a product requirement). */}
-      <h1 className="max-w-4xl text-display-xl font-bold tracking-tight text-primary">
-        {SITE.slogan}
+      <h1 className="text-display-xl font-bold tracking-tight text-primary">
+        {SITE.name}
       </h1>
-      <Baseline delay="sm" className="mt-6 max-w-4xl" />
-      <p className="animate-hero-rise mt-8 max-w-2xl text-lg text-secondary delay-(--duration-base)">
-        Autonomous AI products that help people think better, work faster, and
-        create more.
+      <div className="relative mt-5 max-w-xl">
+        <span className="absolute end-0 bottom-1 font-mono text-sm text-tertiary">
+          {SITE.slogan}
+        </span>
+        <Baseline delay="sm" />
+      </div>
+      <p className="animate-hero-rise mt-9 font-display text-h3 font-bold tracking-tight text-primary md:text-h2">
+        AI that shows its work.
       </p>
-      <p className="animate-hero-rise mt-4 font-mono text-sm text-tertiary delay-(--duration-base)">
-        <a
-          href="#insight"
-          className="transition-colors duration-(--duration-fast) ease-out hover:text-primary"
-        >
-          Product One: AVENAX Insight — AI chart analysis that teaches while it
-          analyzes.
-        </a>
+      <p className="animate-hero-rise mt-4 max-w-2xl text-lg text-secondary delay-(--duration-base)">
+        AI products that strengthen human judgment.
       </p>
+      <div className="animate-hero-rise mt-8 max-w-2xl delay-(--duration-base)">
+        <p className="font-mono text-xs tracking-wide text-tertiary uppercase">
+          <a
+            href="#insight"
+            className="transition-colors duration-(--duration-fast) ease-out hover:text-secondary"
+          >
+            Product One &mdash; AVENAX Insight
+          </a>
+        </p>
+        <p className="mt-2 text-sm text-secondary">
+          Upload a forex, crypto, or financial-market chart screenshot.
+          <br />
+          Insight breaks it down into market structure, liquidity, scenarios,
+          and risk &mdash; using the same clear framework every time.
+        </p>
+      </div>
       <Inline
         gap="4"
         wrap
