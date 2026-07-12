@@ -50,7 +50,7 @@ One ecosystem. One account. One platform. Many AI products. One intelligent infr
 Planned product family (names reserved; **none in active development except Product One**):
 
 - **AVENAX Web** — company website (this repository)
-- **AVENAX Insight** — Product One: AI chart analysis platform
+- **AVENAX Trace** — Product One: AI chart analysis platform
 - **AVENAX Chief** — future
 - **AVENAX Media Factory** — future automated content/animation pipeline
 - **AVENAX OS** — future unified platform

@@ -1,4 +1,4 @@
-# AVENAX Insight — Market Research Report (Product Discovery)
+# AVENAX Trace — Market Research Report (Product Discovery)
 
 | | |
 |---|---|
@@ -78,7 +78,7 @@ Each finding: pain point, frequency (how often encountered across sources), seve
 - **Pain:** retail traders have been burned: doctored Myfxbook screenshots, group-splitting scams, kickback brokers, black-box "AI" win-rate claims, $2,000+ losses reported; even Myfxbook's verification is gamed and moderation distrusted.
 - **Frequency:** High (dominant theme wherever signals are discussed). **Severity:** Very High (money lost + emotional).
 - **Existing solutions:** review sites (Forex Peace Army) — reactive, post-loss. **Weakness:** nothing prevents; verification theater.
-- **WTP:** these users were paying $20–100+/mo for signals before being burned. **Opportunity: 10** — the market explicitly asks for the *opposite* of signals: "They explain the math… logic visibility over magic black boxes." That sentence is AVENAX Insight's positioning (ADR-004) stated verbatim by the market.
+- **WTP:** these users were paying $20–100+/mo for signals before being burned. **Opportunity: 10** — the market explicitly asks for the *opposite* of signals: "They explain the math… logic visibility over magic black boxes." That sentence is AVENAX Trace's positioning (ADR-004) stated verbatim by the market.
 - **Evidence:** 7-pattern scam taxonomy; "there are so many ways to trick the system that this verification platform cannot be trusted"; complaints that scam warnings on Myfxbook were never approved. **Sources:** Syntium Algo scam analysis, EA-Coder, Trustpilot Myfxbook summaries, Forex Peace Army. **Confidence: High** (3+ independent sources).
 
 ### F4 — Pro platforms price out retail traders and demand weeks of learning
@@ -104,7 +104,7 @@ Each finding: pain point, frequency (how often encountered across sources), seve
 - **Pain:** LLMs return essays; traders need a fixed, scannable structure they can check against their own read in seconds.
 - **Frequency:** Medium-High. **Severity:** Medium.
 - **Existing solutions:** SnapPChart's A–F grade + entry/stop/target. **Weakness:** that format *is* a signal — it inherits the trust problem and the regulatory posture AVENAX deliberately avoids.
-- **Opportunity: 8** — Insight's fixed six-section structure (Structure/Liquidity/Bias/Scenarios/Risk education/Reasoning) is the differentiated middle: structured like a tool, educational like a mentor, signal-free by design.
+- **Opportunity: 8** — Trace's fixed six-section structure (Structure/Liquidity/Bias/Scenarios/Risk education/Reasoning) is the differentiated middle: structured like a tool, educational like a mentor, signal-free by design.
 - **Evidence:** LLMs "built for description, not structured extraction with a fixed schema"; TradingView AI "setup output lacks structure." **Source:** SnapPChart comparison. **Confidence: Medium.**
 
 ### F8 — Prompt burden and workflow friction
@@ -209,7 +209,7 @@ Confidence: H = 3+ independent sources · M = 2 / prompted · L = single source 
 19. Subscription tier changes producing surprise charges (M)
 20. Cancellation difficulty / auto-renewal traps (H)
 
-## 6. Top 20 Differentiation Opportunities for AVENAX Insight
+## 6. Top 20 Differentiation Opportunities for AVENAX Trace
 
 1. **Consistency as a product law** — versioned methodology (NFR-5), publicly stated: same chart, same read. No competitor can claim it credibly (9/10)
 2. **Level accuracy as the engineering obsession** — win F1 or nothing else matters (9/10)
@@ -272,7 +272,7 @@ Confidence: H = 3+ independent sources · M = 2 / prompted · L = single source 
 
 ### Pricing evidence (for the pricing decision when it comes — not decided here)
 
-Anchors found: junk tier $5/week; purpose-built screenshot tools $19.99–24/mo; ChatGPT Plus $20/mo; TradingView from $14.95/mo; pro platforms $82–167/mo; human analyst $36–74/hr. **Viable corridor for Insight: $15–29/mo**, framed against mentorship cost ("one hour of a human analyst pays for months"). Single tier confirmed as correct.
+Anchors found: junk tier $5/week; purpose-built screenshot tools $19.99–24/mo; ChatGPT Plus $20/mo; TradingView from $14.95/mo; pro platforms $82–167/mo; human analyst $36–74/hr. **Viable corridor for Trace: $15–29/mo**, framed against mentorship cost ("one hour of a human analyst pays for months"). Single tier confirmed as correct.
 
 ---
 

@@ -29,5 +29,5 @@
 ## F3 — Durable creator businesses sell education and tools, not attention
 **Evidence:** across the trading-education segment specifically, the survivors are consistency-and-depth educators (e.g., two deep videos/month) while signal-sellers churn through audience trust and burn out ([trading YouTubers review](https://www.fortraders.com/blog/top-5-best-trading-youtubers-in-2025-curated-by-expert); scam-collapse evidence in `MARKET_RESEARCH.md` F3). Ad-revenue-only creators are structurally fragile; education → product is the durable ladder. **Confidence: Medium.**
 **Why it works:** educational content compounds (evergreen, searchable, referenced) while attention content depreciates in days; a product gives the compounding audience somewhere to land.
-**AVENAX fit:** media as growth engine for Insight (ADR-008's exact design) — the content teaches structural chart reading; the product is the tool the education makes you want.
+**AVENAX fit:** media as growth engine for Trace (ADR-008's exact design) — the content teaches structural chart reading; the product is the tool the education makes you want.
 **Ethics:** the education must be genuinely valuable stand-alone — content that only functions as a funnel fails the transparency test. **Action:** none until media activates.

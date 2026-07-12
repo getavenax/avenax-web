@@ -9,7 +9,7 @@ Every new session MUST begin by reading, in this exact order:
 1. `docs/PROJECT_VISION.md` — why AVENAX exists, phases, One Product Rule, 90-day objective, founder principles
 2. `docs/ENGINEERING_RULES.md` — the 11-step development workflow, coding rules, quality gates, git workflow
 3. `docs/DECISIONS.md` — every accepted decision (ADR-001 onward) and open items; never contradict an accepted ADR without proposing a new ADR
-4. `docs/PRODUCT_REQUIREMENTS.md` — Product One (AVENAX Insight) business definition, scope, constraints
+4. `docs/PRODUCT_REQUIREMENTS.md` — Product One (AVENAX Trace) business definition, scope, constraints
 5. `docs/PHILOSOPHY.md` — the ratified Three Laws (ADR-022): purpose, human judgment first, explainable-or-explicitly-uncertain, confidence begins with understanding; every product is tested against them
 6. `docs/BRAND_DNA.md` — the ratified visual constitution (ADR-016); the Ten Design Laws bind every surface
 7. `docs/DESIGN_SYSTEM.md` — the constitution's implementation layer: token architecture, parameters, design law; no page before system, no hardcoded design values

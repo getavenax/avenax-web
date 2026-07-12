@@ -1,4 +1,4 @@
-# AVENAX Insight — Product Requirements (Product One)
+# AVENAX Trace — Product Requirements (Product One)
 
 > Status: source of truth for Product One. Business definition only — technical architecture follows in the private product repository at Phase 1 start (per `DECISIONS.md` ADR-013).
 > Governing constraints: One Product Rule, 90-day objective, educational positioning (ADR-002, ADR-004, ADR-006).
@@ -8,11 +8,11 @@
 
 ## 1. Product Vision
 
-Every trader stares at charts and asks the same question: *what is this market actually doing?* AVENAX Insight answers it — instantly, structurally, and educationally.
+Every trader stares at charts and asks the same question: *what is this market actually doing?* AVENAX Trace answers it — instantly, structurally, and educationally.
 
-A user uploads a chart screenshot. Insight returns a professional-grade structural read: market structure, liquidity, bias, high-probability scenarios, risk-management education, and the reasoning behind every conclusion — the analysis of an experienced structural trader, available in seconds, that *teaches while it analyzes*.
+A user uploads a chart screenshot. Trace returns a professional-grade structural read: market structure, liquidity, bias, high-probability scenarios, risk-management education, and the reasoning behind every conclusion — the analysis of an experienced structural trader, available in seconds, that *teaches while it analyzes*.
 
-Insight is the proof that AVENAX builds world-class AI software. It is the first expression of the AVENAX Standard: simple, fast, reliable, beautiful, intelligent.
+Trace is the proof that AVENAX builds world-class AI software. It is the first expression of the AVENAX Standard: simple, fast, reliable, beautiful, intelligent.
 
 ## 2. Target Customer
 
@@ -84,7 +84,7 @@ Explicit non-metrics: views, likes, followers, waitlist size alone. Per the Mani
 
 ## 8. First Paying Customer — Definition
 
-A person with no personal or business relationship to the founder, who discovered Insight through the product's own surfaces (site, waitlist, content), completed payment with their own money at the public price, and is still using the product seven days after paying. Friends, family, and courtesy purchases do not count. The 90-day clock is satisfied only by this definition.
+A person with no personal or business relationship to the founder, who discovered Trace through the product's own surfaces (site, waitlist, content), completed payment with their own money at the public price, and is still using the product seven days after paying. Friends, family, and courtesy purchases do not count. The 90-day clock is satisfied only by this definition.
 
 ## 9. User Journey (MVP)
 
@@ -94,7 +94,7 @@ A person with no personal or business relationship to the founder, who discovere
 4. **Feel the value** — analysis is visibly structured, methodology-grounded, and teaches something; user runs remaining free analyses on their own charts.
 5. **Hit the wall** — free quota ends at a moment of real need.
 6. **Pay** — single clear tier, card payment, immediate continuation.
-7. **Return** — analysis history + consistent quality make Insight part of the pre-trade routine.
+7. **Return** — analysis history + consistent quality make Trace part of the pre-trade routine.
 8. **Spread** — educators and traders share analyses (each output carries clean branding and the educational disclaimer).
 
 ## 10. Functional Requirements
@@ -124,7 +124,7 @@ A person with no personal or business relationship to the founder, who discovere
 
 1. **Positioning constraint (permanent):** educational analysis, decision support, market understanding. Never financial advice, signals, or investment recommendations — in output, marketing, UI copy, and architecture.
 2. **Repository constraint:** all product code in the private repository; nothing in `avenax-web` (ADR-013).
-3. **Effort constraint:** One Product Rule + 80/20 (ADR-002) — Insight owns 80% of engineering effort until product–market fit.
+3. **Effort constraint:** One Product Rule + 80/20 (ADR-002) — Trace owns 80% of engineering effort until product–market fit.
 4. **Methodology constraint:** the analysis framework is a core asset; prompts and orchestration logic are trade secrets and never leave the private repo.
 5. **Model constraint:** multi-model orchestration; no single-provider dependency (ADR-010).
 6. **Brand constraint:** the AVENAX Standard applies — simple, fast, reliable, beautiful (see `BRAND_GUIDELINES.md`).

@@ -1,4 +1,4 @@
-# AVENAX Insight — Cancellation & Churn Research
+# AVENAX Trace — Cancellation & Churn Research
 
 | | |
 |---|---|
@@ -6,11 +6,11 @@
 | **Research Version** | 1.0 |
 | **Confidence Level** | Medium-High for billing/refund classes (multi-source, verbatim-backed); Medium for AI/UX classes; Low-Medium for missing-feature class (inferential) |
 | **Source Coverage** | Trustpilot (Tickeron, TradingView, Motley Fool, Investing.com, Myfxbook), Capterra (TrendSpider), BBB (StocksToTrade), Google Play / App Store (Chart-AI class), community sentiment per `MARKET_RESEARCH.md` §0 |
-| **Known Limitations** | Review archaeology, not first-party churn data — reviewers skew toward the angriest customers; silent churn (C6-type) is structurally under-represented; no exit-survey data exists until Insight launches with one |
+| **Known Limitations** | Review archaeology, not first-party churn data — reviewers skew toward the angriest customers; silent churn (C6-type) is structurally under-represented; no exit-survey data exists until Trace launches with one |
 | **Next Review Date** | **2026-10-07** (90 days) |
 
 > **Living research document** — not constitutional documentation.
-> Question: why do users cancel AI trading / chart-analysis subscriptions — and how does Insight eliminate every cause before launch?
+> Question: why do users cancel AI trading / chart-analysis subscriptions — and how does Trace eliminate every cause before launch?
 
 ---
 
@@ -56,7 +56,7 @@ Reviews show churn in this category is **trust-mediated, not feature-mediated.**
 
 ---
 
-## 3. Elimination plan — how Insight kills every class before launch
+## 3. Elimination plan — how Trace kills every class before launch
 
 | Class | Pre-launch elimination (all within approved MVP scope) |
 |---|---|

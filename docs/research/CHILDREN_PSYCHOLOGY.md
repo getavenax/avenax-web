@@ -26,18 +26,18 @@
 **The one-sentence answer to the founder's question:** *Your daughter isn't consuming the episode again — she's completing it: each viewing lets her working memory reach a layer she couldn't hold last time, and once she's mastered it, the episode becomes a controllable world where being right feels good and everything is safe.*
 
 **AVENAX fit & ethical application (Medium confidence, analogical):**
-- **Predictable structure = adult comfort too.** Insight's fixed six-section output is the grown-up version of the known episode: same shape every time, so cognitive effort goes into the *chart*, not into parsing the interface. This is already product law (NFR-5) — the research explains why it will drive retention.
+- **Predictable structure = adult comfort too.** Trace's fixed six-section output is the grown-up version of the known episode: same shape every time, so cognitive effort goes into the *chart*, not into parsing the interface. This is already product law (NFR-5) — the research explains why it will drive retention.
 - **Design the mastery arc.** Users should feel themselves getting better at reading charts across sessions (the Blue's Clues quiet→interactive curve). Retention through competence is the white-hat alternative to retention through compulsion.
 - **Calm pacing is a cognitive feature, not just aesthetics.** The Bluey/Cocomelon contrast maps directly onto our "premium, calm, architectural — never a trading terminal" clarification: dense, flashing, fast surfaces produce arousal without understanding.
 - **Ethical concerns:** none for these applications — they run on comprehension and competence. The unethical twin (overstimulation, autoplay loops, infinite novelty feeds) is recorded here precisely so it stays recognizable and rejected.
-- **Recommended action:** none now (Phase 1 design input). Tag Insight's UX spec with "mastery arc" and "predictable structure" when it's written.
+- **Recommended action:** none now (Phase 1 design input). Tag Trace's UX spec with "mastery arc" and "predictable structure" when it's written.
 
 ## F2 — Repetition + participation beats repetition alone
 
 **Evidence:** Blue's Clues was *designed* for re-viewing (the same episode aired five days in a row) and for viewer participation (pauses inviting answers); comprehension and involvement rose across airings, and the interactive habit transferred to other programs ([Anderson et al.](https://jgregorymcverry.com/readings/Anderson%20et%20al.%20-%202000%20-%20Researching%20Blue%20%E2%80%99%20s%20Clues%20Viewing%20Behavior%20and%20Impact%20Nickelodeon.pdf)). **Confidence: High.**
 **Why it works:** active prediction ("where's the clue?") converts passive exposure into retrieval practice — the strongest known learning mechanism.
 **Why it fails:** participation prompts pitched above or below the viewer's level break the loop (too hard = silence, too easy = boredom).
-**AVENAX fit:** Insight's *Reasoning* section can invite the user's own read before revealing conclusions ("what would invalidate this?") — retrieval practice inside an analysis tool. **Ethics:** clean — it builds skill. **Action:** parked as a Phase 1 UX idea (Founder Decision Filter: helps Product One → candidate, not commitment).
+**AVENAX fit:** Trace's *Reasoning* section can invite the user's own read before revealing conclusions ("what would invalidate this?") — retrieval practice inside an analysis tool. **Ethics:** clean — it builds skill. **Action:** parked as a Phase 1 UX idea (Founder Decision Filter: helps Product One → candidate, not commitment).
 
 ## F3 — Emotional attachment attaches to *characters as safe relationships*
 

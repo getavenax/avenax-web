@@ -1,4 +1,4 @@
-# AVENAX Insight — Competitor Matrix
+# AVENAX Trace — Competitor Matrix
 
 | | |
 |---|---|
@@ -15,7 +15,7 @@
 
 ## 1. The Field
 
-Serious competitors fall into five classes. AVENAX Insight competes directly with Class 1, is substituted by Classes 2–4, and inherits the reputation damage of Class 5.
+Serious competitors fall into five classes. AVENAX Trace competes directly with Class 1, is substituted by Classes 2–4, and inherits the reputation damage of Class 5.
 
 | Class | Products | One-line read |
 |---|---|---|
@@ -27,7 +27,7 @@ Serious competitors fall into five classes. AVENAX Insight competes directly wit
 
 ## 2. Master Matrix
 
-| | SnapPChart | ChartSnipe | TradingView (AI) | TrendSpider | Tickeron | Trade Ideas | Generic LLMs | AVENAX Insight (planned) |
+| | SnapPChart | ChartSnipe | TradingView (AI) | TrendSpider | Tickeron | Trade Ideas | Generic LLMs | AVENAX Trace (planned) |
 |---|---|---|---|---|---|---|---|---|
 | **Pricing** | $19.99/mo; 2 free lifetime | $24/mo; limited trial | $14.95+/mo | from $82/mo (+AI addon) | high, tiered, confusing | $84–167/mo | $0–20/mo | single tier, $15–29 corridor ⚑ |
 | **Positioning** | "Grade any chart A–F" | Forex-first multi-mode analysis | Charts platform + AI forecast widget | Automated TA for serious traders | "AI robots" / signals | AI scanning for day traders | General assistant | Educational structural analysis — explicitly not signals |
@@ -48,14 +48,14 @@ Serious competitors fall into five classes. AVENAX Insight competes directly wit
 - **What they validate for us:** demand for structured screenshot analysis at ~$20/mo exists; consistency is a selling point customers understand.
 
 ### ChartSnipe — the forex specialist
-- **Strengths:** liquidity/SMC-literate modes (closest to Insight's methodology language); live data + news context; content marketing engine (their ChatGPT teardown ranks).
+- **Strengths:** liquidity/SMC-literate modes (closest to Trace's methodology language); live data + news context; content marketing engine (their ChatGPT teardown ranks).
 - **Weaknesses:** breadth over depth (6 modes dilute); "generous stop placement" criticized; restrictive free tier; accuracy claims are self-published.
 - **What they validate:** the priority segment (structural forex traders) is worth specializing for; education-adjacent content is the acquisition channel.
 
 ### TradingView — the incumbent everyone already uses
 - **Strengths:** distribution (the default charting layer of retail trading); price floor credibility at $14.95; every user's charts originate here — including the screenshots our users will upload.
 - **Weaknesses:** AI is a forecast widget, not analysis; "setup output lacks structure"; auto-renew complaints (€700 surprise renewals on Trustpilot) show even incumbents leak trust on billing.
-- **Strategic note:** not a competitor to beat — a habitat to live in. Insight analyzes TradingView screenshots better than TradingView does.
+- **Strategic note:** not a competitor to beat — a habitat to live in. Trace analyzes TradingView screenshots better than TradingView does.
 
 ### TrendSpider / Trade Ideas / Tickeron — the expensive tier
 - **Strengths:** real technology depth (TrendSpider automation, Trade Ideas scanning); established brands; pro features.
@@ -74,7 +74,7 @@ Serious competitors fall into five classes. AVENAX Insight competes directly wit
   trust ↑
           │                    · Trade Ideas
    high   │   · TradingView(platform)
-          │                              ★ INSIGHT target position
+          │                              ★ TRACE target position
           │   · human analysts ($$$)
    med    │        · SnapPChart  · ChartSnipe
           │   · generic LLMs

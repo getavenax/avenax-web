@@ -106,7 +106,7 @@ Structural guarantees that make the targets achievable:
 The Phase 1+ platform will eventually include: AI platform, authentication, dashboard, billing, API, documentation, blog, careers, investor page, admin panel, analytics, CMS, internationalization, knowledge base, status page.
 
 Obligations this places on today's code:
-- Design tokens and primitives must be product-agnostic (they will be reused by AVENAX Insight and beyond).
+- Design tokens and primitives must be product-agnostic (they will be reused by AVENAX Trace and beyond).
 - Use CSS logical properties (`margin-inline`, `padding-block`) everywhere so RTL/i18n costs nothing later.
 - `constants/` centralizes all site configuration so a CMS can replace it without touching components.
 - No architectural decision may make these features require a major refactor — but **none of them are built now** (90-day objective governs).

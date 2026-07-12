@@ -4,6 +4,8 @@
 > Status: **RATIFIED — founder decision, 2026-07-09 (`DECISIONS.md` ADR-016).** This document is the permanent visual constitution of AVENAX, superior to `DESIGN_SYSTEM.md` (which implements it) and amendable only through `DECISIONS.md`.
 > Scope: every AVENAX surface, product, and medium, for the next decade.
 > Method: principles are permanent; parameters are amendable. This distinction is itself the first design decision — see §0.
+>
+> **Naming parameter amendment (2026-07-12, ADR-023):** AVENAX Trace replaces the former working name AVENAX Insight. Historical references below remain unchanged; the measurement language, laws, and visual philosophy are unaffected.
 
 ---
 

@@ -27,7 +27,7 @@ They are laws, not values. Values are aspirations; laws are tests. A product eit
 
 **Review question:** *Who makes the decision that matters — the person, or the product?* If the answer is not clearly the person, redesign.
 
-**Product implications:** Insight outputs structure, scenarios, and invalidation conditions — never entry or exit instructions. Any future agentic product places a human confirmation gate before every consequential action. No AVENAX product ever auto-executes a decision the user must live with.
+**Product implications:** Trace outputs structure, scenarios, and invalidation conditions — never entry or exit instructions. Any future agentic product places a human confirmation gate before every consequential action. No AVENAX product ever auto-executes a decision the user must live with.
 
 ## Law 2 — Every important conclusion must be explainable or explicitly uncertain.
 
@@ -41,7 +41,7 @@ They are laws, not values. Values are aspirations; laws are tests. A product eit
 
 **Review question:** *Can the user understand why?* Visibility is not enough — comprehension is the goal. If understanding cannot be produced: is the uncertainty stated plainly — or should the system stay silent?
 
-**Product implications:** Insight's Reasoning section is undescopeable scope; uncertainty states are designed UI, not error fallbacks; the methodology is versioned and stamped on every output; the pre-launch accuracy benchmark (roadmapped) is this law's first measurement instrument.
+**Product implications:** Trace's Reasoning section is undescopeable scope; uncertainty states are designed UI, not error fallbacks; the methodology is versioned and stamped on every output; the pre-launch accuracy benchmark (roadmapped) is this law's first measurement instrument.
 
 ## Law 3 — Confidence begins with understanding.
 
@@ -53,7 +53,7 @@ They are laws, not values. Values are aspirations; laws are tests. A product eit
 
 **Review question:** *After a month of use, does the user understand more — or merely depend more?*
 
-**Product implications:** every Insight analysis carries its teaching layer; retention is measured as competence-in-context (analyses per trading routine), never as raw opens; no engagement mechanics that substitute stimulation for comprehension; the cancel flow asks what the user learned — churn data doubles as a comprehension measure.
+**Product implications:** every Trace analysis carries its teaching layer; retention is measured as competence-in-context (analyses per trading routine), never as raw opens; no engagement mechanics that substitute stimulation for comprehension; the cancel flow asks what the user learned — churn data doubles as a comprehension measure.
 
 ---
 
@@ -69,6 +69,6 @@ The laws compress into the sentence AVENAX says in public, and must be able to s
 - Every new product idea is asked the three tests before the Founder Decision Filter.
 - Where a law conflicts with growth, revenue, or convenience: the law wins. That is what makes it a law.
 
-*First application: AVENAX Insight — structured, explained chart analysis; the Reasoning section is undescopeable; the landing page carries Law 2's public expression and Law 3 verbatim.*
+*First application: AVENAX Trace — structured, explained chart analysis; the Reasoning section is undescopeable; the landing page carries Law 2's public expression and Law 3 verbatim.*
 
 *Lineage: Founding Manifesto ("AI should amplify people"), ADR-004 (educational positioning), ADR-021 (Product Law: AI that shows its work).*

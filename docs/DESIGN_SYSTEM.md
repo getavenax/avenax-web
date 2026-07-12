@@ -2,7 +2,7 @@
 
 > Status: approved direction; implementation gated per `ROADMAP.md` Phase 0 schedule.
 > **Governed by `BRAND_DNA.md` — the AVENAX visual constitution (ratified 2026-07-09, ADR-016).** This document is the constitution's implementation layer: it owns parameters (faces, values, scales); the constitution owns laws. Where the two conflict, `BRAND_DNA.md` wins.
-> Scope: foundation for ALL AVENAX surfaces — Web, Insight, Chief, Media Factory, OS. Every future product reuses this system.
+> Scope: foundation for ALL AVENAX surfaces — Web, Trace, Chief, Media Factory, OS. Every future product reuses this system.
 >
 > **Permanent law (founder directive):** Before building any page, the design system comes first. Do not design pages first — design the system first. Everything token-driven. No random hardcoded values. No one-off styling. No page-specific design decisions before system decisions. The Design System is the foundation of AVENAX.
 
@@ -117,7 +117,7 @@ Typography carries the entire brand (no color to lean on). Three faces, three jo
 |---|---|---|
 | Display / Headings | **Archivo** (Google Fonts, OFL) | Characterful grotesque with real presence at heavy weights; 100% OFL — the public repository stays legally clean (ADR-017). Replaced Cabinet Grotesk, whose Fontshare EULA prohibits public-server distribution. Secondary fallback: Familjen Grotesk (OFL). |
 | Body / UI | **Instrument Sans** (Google Fonts, OFL) | Quiet, highly legible, pairs cleanly under the display face. |
-| Data / Mono | **Geist Mono** (OFL) | Tabular numerals — critical for Insight's market data later. |
+| Data / Mono | **Geist Mono** (OFL) | Tabular numerals — critical for Trace's market data later. |
 
 All self-hosted, `font-display: swap`, subset latin. License verification is step one of implementation.
 

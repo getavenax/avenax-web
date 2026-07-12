@@ -45,7 +45,7 @@ Visual language (specified in `DESIGN_SYSTEM.md`):
 - We say what we build and what we refuse to build. Restraint is part of the voice.
 - Never: exclamation-mark enthusiasm, buzzword chains ("revolutionary AI-powered synergy"), fake urgency, engagement bait.
 
-## 6. Product Positioning Language — AVENAX Insight
+## 6. Product Positioning Language — AVENAX Trace
 
 Permanent, legally significant wording rules (see `DECISIONS.md` ADR-004):
 
@@ -79,7 +79,7 @@ Before anything public ships, verify:
 1. Does it look and read like AVENAX (monochrome, minimal, confident, calm)?
 2. Would we be proud of it if AVENAX is a global company in ten years? (The Founder Rule)
 3. Does it use only design-system tokens and approved voice patterns?
-4. If it touches Insight: is the educational positioning intact?
+4. If it touches AVENAX Trace: is the educational positioning intact?
 5. Does it increase brand value — not just views, clicks, or noise?
 
 ---

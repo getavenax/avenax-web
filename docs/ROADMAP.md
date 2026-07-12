@@ -30,14 +30,14 @@ Minimum Brand Principle: enough brand to launch, not enough to be perfect. Perfe
 > V2+ are titles only. Per the Executive Directive, every hour spent designing V3–V5 today is an hour taken from the 90-day objective.
 
 - **V1 (= Phase 0):** design system + landing page + waitlist + SEO baseline. Static on Cloudflare Pages.
-- **V2:** public manifesto page, product page for AVENAX Insight, static blog, motion refinement.
+- **V2:** public manifesto page, product page for AVENAX Trace, static blog, motion refinement.
 - **V3:** Workers evaluation (only if SSR needed), authentication, dashboard shell.
 - **V4:** Product One integration surface — screenshot upload, analysis display.
 - **V5:** billing/subscriptions, internationalization (RTL/Persian among first), documentation site, status page.
 
 ---
 
-## Phase 1 — Product One: AVENAX Insight
+## Phase 1 — Product One: AVENAX Trace
 
 Starts only after Phase 0 ships. First actions when Phase 1 opens:
 

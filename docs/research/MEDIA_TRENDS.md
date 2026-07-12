@@ -25,7 +25,7 @@
 
 ## T4 — Trading/finance audiences are migrating toward verification culture
 **Observed:** post-scam-wave, the surviving finance communities increasingly demand shown methodology, live track records, and third-party verification — while verification systems themselves get gamed (Myfxbook, `MARKET_RESEARCH.md` F3). **Confidence: Medium.**
-**Read-through:** the demand for "logic visibility" will keep rising; Insight's reasoning-first output rides the trend. **Action:** none; re-verify at next cycle.
+**Read-through:** the demand for "logic visibility" will keep rising; Trace's reasoning-first output rides the trend. **Action:** none; re-verify at next cycle.
 
 ---
 
