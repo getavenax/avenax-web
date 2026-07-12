@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { SITE } from "@/constants/site";
 import "../styles/globals.css";
 
 const archivo = localFont({
@@ -29,9 +30,9 @@ const geistMono = localFont({
   preload: false,
 });
 
-const TITLE = "AVENAX — Next Standard.";
+const TITLE = `${SITE.name} — ${SITE.slogan}`;
 const DESCRIPTION =
-  "AVENAX builds autonomous AI products that help people think better, work faster, and create more. Product One: Insight — educational AI chart analysis.";
+  `${SITE.name} builds AI products that strengthen human judgment. ${SITE.product.name} provides explainable AI chart analysis for forex, crypto, and financial markets.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getavenax.com"),
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     url: "/",
-    siteName: "AVENAX",
+    siteName: SITE.name,
     type: "website",
     locale: "en_US",
     images: [
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "AVENAX — Next Standard.",
+        alt: `${SITE.name} — ${SITE.slogan}`,
       },
     ],
   },

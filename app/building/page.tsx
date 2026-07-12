@@ -124,9 +124,9 @@ export default function BuildingPage() {
                 published here.
               </p>
               <p className="text-sm text-tertiary">
-                AVENAX Insight provides educational analysis and decision
-                support — never financial advice, signals, or investment
-                recommendations.
+                {SITE.product.name}{" "}
+                provides educational analysis and decision support — never
+                financial advice, signals, or investment recommendations.
               </p>
             </Stack>
           </Stack>

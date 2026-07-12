@@ -5,6 +5,12 @@
 export const SITE = {
   name: "AVENAX",
   slogan: "Next Standard.",
+  product: {
+    name: "AVENAX Trace",
+    shortName: "Trace",
+    displayName: "TRACE.",
+    slug: "trace",
+  },
   domain: "getavenax.com",
   url: "https://getavenax.com",
   repository: "https://github.com/getavenax/avenax-web",

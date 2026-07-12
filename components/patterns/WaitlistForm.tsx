@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Stack } from "@/components/ui/Stack";
 import { Field } from "@/components/patterns/Field";
-import { WAITLIST_ENDPOINT } from "@/constants/site";
+import { SITE, WAITLIST_ENDPOINT } from "@/constants/site";
 
 type Status = "idle" | "submitting" | "success";
 
@@ -69,7 +69,9 @@ export function WaitlistForm({ source = "site", className }: WaitlistFormProps) 
       {status === "success" ? (
         <Stack gap="4">
           <p className="text-lg text-primary">
-            You&rsquo;re on the list. We&rsquo;ll be in touch when Insight opens.
+            You&rsquo;re on the list. We&rsquo;ll be in touch when{" "}
+            {SITE.product.shortName}{" "}
+            opens.
           </p>
           <Baseline />
         </Stack>
